@@ -1,0 +1,48 @@
+1. Project Overview
+
+This project is a Voting System implemented as a RESTful web application using Spring Boot. The system allows multiple users to interact with the application through different endpoints to perform actions such as registering candidates, casting votes, retrieving vote counts, and determining the winner.
+
+
+2. System Architecture
+
+The system follows a client-server architecture where:
+
+Client: A browser or API testing tool like Postman interacts with the server through HTTP requests.
+
+Server: The server is built using Spring Boot and handles the business logic and data processing.
+
+The application follows the MVC (Model-View-Controller) pattern:
+
+Model: Represents the data structures (in this case, the Candidate and Vote classes).
+
+View: Not applicable in this case, as the system is an API-only service.
+
+Controller: Handles the incoming HTTP requests and communicates with the service layer.
+
+3. Key Components
+
+Controller Layer: The controller layer contains the API endpoints that handle HTTP requests.
+
+EnterCandidateController: Manages the creation of new candidates.
+
+VoteController: Manages the actions for voting and counting votes.
+
+ResultController: Handles requests to get the vote count or determine the winner.
+
+Service Layer: Handles the business logic.
+
+CandidateService: Manages operations on candidates, such as adding candidates and checking their existence.
+
+VoteService: Handles voting logic and counting votes, ensuring thread safety.
+
+Data Layer: In this case, the data is stored in local variables, specifically a Map<String, Integer> where the key is the candidate name and the value is the vote count. There's no actual database used.
+
+
+4. API Endpoints
+
+POST /api/entercandidate: Registers a new candidate with an initial vote count of 0.
+POST /api/castvote: Casts a vote for a candidate, increasing their vote count.
+GET /api/countvote: Retrieves the current vote count for a candidate.
+GET /api/listvote: Lists all candidates with their current vote counts.
+GET /api/getwinner: Returns the candidate with the highest number of votes.
+
