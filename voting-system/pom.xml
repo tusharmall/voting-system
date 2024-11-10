@@ -6,6 +6,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.0-M1</version>
 		<relativePath /> <!-- lookup parent from repository -->
+		
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>voting-system</artifactId>
