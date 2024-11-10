@@ -3,6 +3,7 @@
 ### Project Overview
 This is a simple Voting System built using Spring Boot. The application allows users to register candidates, cast votes for them, view vote counts, and determine the winner based on the number of votes.
 
+
 ### Features Implemented
 - Register a new candidate with an initial vote count of 0.
 - Cast a vote for a candidate and increment their vote count.
